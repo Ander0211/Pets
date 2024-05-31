@@ -32,21 +32,21 @@
         "; 
 
         $result = pg_query($conn, $query_users); 
-        while($row = pg_fetch_assoc ($result)){
+        while($row = pg_fetch_assoc($result)){
           echo "<tr>";
-             echo"<td>".htmlspecialchars($row['fullname'])."</td>";
-             echo"<td>".htmlspecialchars($row['email']) ."</td>";
-             echo"<td>".htmlspecialchars($row['status']) ."</td>";
+             echo"<td>".$row['fullname']."</td>";
+             echo"<td>".$row['email'] ."</td>";
+             echo"<td>".$row['status'] ."</td>";
              echo" <td><img src='photo/avataru.png' width='35'></td>";
             echo " <td>
                <a href= '#'><img src='icons/perfil.png' width='25'></a>
-              <a href='delete_user.php?id=". htmlspecialchars($row['id']) ."' onclick='return confirm(\"Are you sure you want to delete this user?\");'><img src='icons/usuario.png' width='25'></a>
-               </td>";
+               <a href='delete_user.php?id=".$row['id']."'><img src='icons/usuario.png' width='25'></a>
+              </td>";
               echo"</tr>";
     }
-
-   
-     ?>
+    
+  ?>
+ 
 </table>   
 </body>
 </html>

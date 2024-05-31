@@ -11,6 +11,6 @@
     if(!$conn){
         die("Connection Error"  . pg_last_error());
     }else{
-        echo "Success !!!!";
+        //echo "Success !!!!";
     }
 ?>
